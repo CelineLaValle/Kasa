@@ -7,6 +7,7 @@ import Footer from './components/Footer.jsx'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Error from './pages/Error.jsx'
 import Logements from './pages/Logements.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/logement/:id" element={<Logements />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
     <Footer />

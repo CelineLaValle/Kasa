@@ -1,6 +1,9 @@
 import '../styles/Logements.css'
+import Error from '../pages/Error'
 import annonces from '../../data/logements.json'
+import Carousel from '../components/Carousel'
 import { useParams } from 'react-router-dom';
+
 
 function LogementsDetail() {
     const {id} = useParams();
@@ -22,13 +25,19 @@ function LogementsDetail() {
 
     // Vérifier si une annonce a été trouvée
     if (!annonce) {
-        return <div>Logement non trouvé</div>;
+        return <Error />
     }
- 
+
     return (
-        <div>
-          <h2 className="card-title">{annonce.title}</h2>
-        </div>
+       <div className="">
+        <Carousel 
+            arrayPictures={annonce.pictures}
+        />
+    {/* <div className="">
+      <img src={annonce.pictures} alt={annonce.title} className="" />
+    </div> */}
+    <h2 className="">{annonce.title}</h2>
+  </div>
       );
     }
 

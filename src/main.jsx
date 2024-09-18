@@ -22,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
+    {/* {window.location.pathname !== '/logements:id' && <Banner />} Exclut le composant Banner de la page "Logements" */}
     <Footer />
   </React.StrictMode>,
 )

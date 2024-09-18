@@ -29,9 +29,10 @@ function Carousel({ arrayPictures }) {
 
     return (
         <div className="arrow">
-           <button> <img src={arrowLeft} onClick={() => handleClick('left')} alt="Arrow left" className="arrow_left" /></button>
-            <button><img src={arrowRight} onClick={() => handleClick('right')} alt="Arrow right" className="arrow_right" /></button>
+            <img src={arrowLeft} onClick={() => handleClick('left')} alt="Arrow left" className="arrow_left" />
+            <img src={arrowRight} onClick={() => handleClick('right')} alt="Arrow right" className="arrow_right" />
             <img src={arrayPictures[currentSlideIndex]} alt="Carousel" className="slide" />
+            <div className="slide-number">{currentSlideIndex + 1}/{arrayPictures.length}</div>
         </div>
 );
 }

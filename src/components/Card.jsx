@@ -7,7 +7,7 @@ function Card() {
         <div className="card-container">
             {annonces.map((annonce) => (
                 <div key={annonce.id} className="card">
-                <Link to={`/logement/${annonce.id}`} className="navLink">
+                <Link to={`/logement/${annonce.id}`} className="navLinkCard">
                     <img src={annonce.cover} alt={annonce.title} className="card-cover" />
                     <h2 className="card-title">{annonce.title}</h2>
                 </Link>

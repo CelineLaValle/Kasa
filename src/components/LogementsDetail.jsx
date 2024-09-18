@@ -1,8 +1,11 @@
 import '../styles/Logements.css'
 import Error from '../pages/Error'
+import Tags from '../components/Tags'
 import annonces from '../../data/logements.json'
 import Carousel from '../components/Carousel'
 import { useParams } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 function LogementsDetail() {
@@ -28,16 +31,28 @@ function LogementsDetail() {
         return <Error />
     }
 
+    // const Annonce = ({ rating }) => {
+    //     const stars = [];
+    //     for (let i = 0; i < rating; i++) {
+    //       stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
+    //     }}
+
     return (
-       <div className="">
+       <div className="logementsDetail">
         <Carousel 
             arrayPictures={annonce.pictures}
         />
-    {/* <div className="">
-      <img src={annonce.pictures} alt={annonce.title} className="" />
-    </div> */}
-    <h2 className="">{annonce.title}</h2>
-  </div>
+        <div className="logementInfo">
+            <h2 className="logementTitle">{annonce.title}</h2>
+            <p className="logementLocation">{annonce.location}</p>
+            <p className='logementTag'><Tags /></p>
+        </div>
+        <div className="logementHostRating">
+            <p className='logementHost'>{annonce.host.name}</p>
+            <img src={annonce.host.picture} alt={annonce.host.name} className="logementHostPicture" />
+            {/* <div className='logementRating'>{annonce.rating}{stars}</div> */}
+        </div>
+       </div>
       );
     }
 

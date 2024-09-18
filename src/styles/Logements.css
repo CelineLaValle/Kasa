@@ -1,0 +1,52 @@
+.logementsDetail {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.logementInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+
+.logementTitle {
+    color: #FF6060;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.logementLocation {
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.logementTag {
+    display: flex;
+    /* gap: 10px; */
+    /* justify-content: space-around; */
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    font-family: Montserrat;
+    background-color: #FF6060;
+    border-radius: 10px;
+}
+
+.logementHostRating {
+    color: #FF6060;
+}
+
+.logementHost {
+    font-family: Montserrat;
+    color: #FF6060;
+}
+
+.logementHostPicture {
+
+}
+
+.logementRating {
+
+}

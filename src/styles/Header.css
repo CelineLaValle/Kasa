@@ -1,14 +1,11 @@
-.headerContainer {
-    display: flex;
-    justify-content: center;
-}
-
 .header {
     display: flex;
     max-width: 1920px;
     height: 68px;
     justify-content: space-between;
     align-items: center;
+    display: flex;
+    max-width: 1920px;
     margin: 0 5%;
 }
 

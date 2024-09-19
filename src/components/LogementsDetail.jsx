@@ -45,7 +45,7 @@ function LogementsDetail() {
         <div className="logementInfo">
             <h2 className="logementTitle">{annonce.title}</h2>
             <p className="logementLocation">{annonce.location}</p>
-            <p className='logementTag'><Tags /></p>
+            <Tags />
         </div>
         <div className="logementHostRating">
             <p className='logementHost'>{annonce.host.name}</p>

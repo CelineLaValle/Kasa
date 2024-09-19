@@ -5,7 +5,6 @@ import logo from '../assets/logo.png';
 
 function Header() {
     return (
-        <div className="headerContainer">
             <div className="header">
                 <img className="logo" src={logo} alt="logo" />
                     <nav className="navHeader">
@@ -13,7 +12,6 @@ function Header() {
                         <Link to="/about" className="navLink">A Propos</Link>
                     </nav>
             </div>
-       </div>
     )
 }
 

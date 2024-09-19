@@ -1,18 +1,29 @@
 import '../styles/Logements.css'
-import annonces from '../../data/logements.json'
+import logements from '../../data/logements.json';
+import { useParams } from 'react-router-dom';
 
-function Tags({ tags }) {
-    return (
-        tags.map((item) => {
-            if (id === item.id) {
-                annonce = item; // Stocker l'annonce correspondante
-                console.log(annonce);
-            }
-        })
-    )
+function Tags() {
+  const { id } = useParams();
+
+  return (
+    <div>
+      {logements.map((annonce) => {
+        if (id === annonce.id) {
+          return (
+            <div key={annonce.id}>
+              {annonce.tags.map((tag, index) => (
+                <span key={index} className="logementTag">{tag}</span>
+              ))}
+            </div>
+          );
+        }
+        return null;
+      })}
+    </div>
+  );
 }
 
-
-// {annonce.tags}
-
 export default Tags;
+
+
+

@@ -17,7 +17,7 @@
 
 .arrow_left {
     position: absolute;
-	left: 100px;
+	left: 30px;
     top: 50%;
     transform: translate(0, -50%);
     z-index: 1;
@@ -25,7 +25,7 @@
 
 .arrow_right {
     position: absolute;
-	right: 100px;
+	right: 30px;
     top: 50%;
     transform: translate(0, -50%);
     z-index: 1;

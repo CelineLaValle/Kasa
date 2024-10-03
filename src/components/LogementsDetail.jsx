@@ -1,6 +1,7 @@
 import '../styles/Logements.css'
 import Error from '../pages/Error'
 import Tags from '../components/Tags'
+import Rating from '../components/Rating'
 import annonces from '../../data/logements.json'
 import Carousel from '../components/Carousel'
 import { useParams } from 'react-router-dom';
@@ -42,16 +43,20 @@ function LogementsDetail() {
         <Carousel 
             arrayPictures={annonce.pictures}
         />
+        <div className="logementInfoContainer">
         <div className="logementInfo">
             <h2 className="logementTitle">{annonce.title}</h2>
             <p className="logementLocation">{annonce.location}</p>
-            <Tags />
+            <Tags tags={annonce.tags}/>
         </div>
         <div className="logementHostRating">
+            <div className="hostInfo">
             <p className='logementHost'>{annonce.host.name}</p>
             <img src={annonce.host.picture} alt={annonce.host.name} className="logementHostPicture" />
-            {/* <div className='logementRating'>{annonce.rating}{stars}</div> */}
+            </div>
+            <Rating rating={annonce.rating} />
         </div>
+       </div>
        </div>
       );
     }

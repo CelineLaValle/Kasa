@@ -43,3 +43,14 @@
     font-family: Montserrat;
     font-size: 24px;
 }
+
+
+@media (max-width: 1024px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

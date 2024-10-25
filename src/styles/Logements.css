@@ -1,6 +1,7 @@
 .logementsDetail {
     width: 90%;
-    margin: 0 5%;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .logementInfoContainer {
@@ -82,4 +83,45 @@
     margin-left: 10px;
     width: 36px;
     height: 36px;
+}
+
+.collapseContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+    margin: 20px 0 20px 0;
+}
+
+.collapseColonne {
+    width: 50%;
+}
+
+@media (max-width: 1024px) {
+    .logementInfoContainer {
+        flex-direction: column;
+    }
+
+    .collapseContainer {
+        flex-direction: column;
+    }
+
+    .logementHostRating {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .hostInfo {
+        order: 2;
+    }
+
+    .rating {
+        order: 1;
+    }
+
+    .collapseColonne {
+        width: 100%;
+    }
 }

@@ -8,17 +8,17 @@
     color: white;
     font-family: Montserrat;
     font-size: 24px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
-.arrow {
+.arrowCollapse {
     width: 24px;
     height: 14px;
     transition: transform 0.3s ease;
 }
 
-.arrow.rotate {
+.rotate {
     transform: rotate(180deg);
   }
 
@@ -33,7 +33,7 @@
 }
 
 .show {
-    display: flex;
+    display: block;
 }
 
 .hide {

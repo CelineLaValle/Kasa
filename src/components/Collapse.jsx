@@ -9,15 +9,15 @@ function Collapse ({title, text}) {
     console.log(clickCollapse);
 
     return (
-        <div>
+        <>
             <div className="collapse" onClick={clickCollapse}>
                 <h2>{title}</h2>
-                <img className={`arrow ${collapse ? 'rotate' : ''}`} src={arrowTop} alt="arrow-bottom" />
+                <img className={`arrowCollapse ${collapse ? 'rotate' : ''}`} src={arrowTop} alt="arrow-bottom" />
             </div>
             <div>
-            <p className={`textCollapse ${collapse ? 'show' : 'hide'}`}>{text}</p>
+            <div className={`textCollapse ${collapse ? 'show' : 'hide'}`}>{text}</div>
             </div>
-        </div>
+        </>
     )
 
 }

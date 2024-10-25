@@ -10,14 +10,46 @@
     font-size: 288px;
     color: #FF6060;
     box-sizing: border-box;
+    margin: auto;
+    padding-bottom: 50px;
 }
 
 .textError {
     font-size: 36px;
     color: #FF6060;
     box-sizing: border-box;
+    font-weight: 500;
+}
+
+.linkError {
+    margin: 100px 0 100px 0;
+    font-weight: 500;
 }
 
 .linkError:visited {
     color: initial;
+}
+
+@media (max-width: 1024px) {
+    .titleError {
+        font-size: 96px;
+        margin-top: 100px;
+    }
+
+    .textError {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .linkError {
+        font-size: 18px;
+    }
+
+    .line1 {
+        display: block;
+    }
+    
+    .line2 {
+        display: block; 
+    }
 }
